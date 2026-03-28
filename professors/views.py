@@ -119,7 +119,10 @@ class ProfessorViewSet(viewsets.ViewSet):
         return Response(status=status.HTTP_204_NO_CONTENT)
 """
 
+from _school_project_root.pagination import MyPagination
+
 # using ModelViewSet
 class ProfessorViewSet(viewsets.ModelViewSet):
     queryset=ProfessorModel.objects.all()
     serializer_class=ProfessorSerializer
+    pagination_class=MyPagination

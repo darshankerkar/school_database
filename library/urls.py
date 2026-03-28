@@ -7,4 +7,3 @@ urlpatterns=[
     path('author/<int:id>', views.AuthorDetailView.as_view()),
     path('books/<int:id>', views.BookDetailView.as_view()),
 ]
-]

@@ -12,12 +12,12 @@ class BooksView(generics.ListCreateAPIView):
     queryset=BookModel.objects.all()
     serializer_class=BookSerializer
 
-class AuthorDetailView(generics.RetrieveUpdateDeleteAPIView):
+class AuthorDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset=AuthorModel.objects.all()
     serializer_class=AuthorSerializer 
     lookup_field='id'   
 
-class BookDetailView(generics.RetrieveUpdateDeleteAPIView):
+class BookDetailView(generics.RetrieveUpdateDestroyAPIView):
     queryset=BookModel.objects.all()
     serializer_class=BookSerializer 
     lookup_field='id'   

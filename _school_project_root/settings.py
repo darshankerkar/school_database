@@ -44,6 +44,16 @@ INSTALLED_APPS = [
     'library',
 ]
 
+# Global Pagination
+
+# PageNumberPagination gives page_size 
+# LimitOffsetPagination gives limit (max pages), and offset(startingg point)
+REST_FRAMEWORK={
+    # 'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination', 
+    'PAGE_SIZE':5
+}
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
