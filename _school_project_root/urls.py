@@ -16,6 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.views.generic import RedirectView
 from professors import views
 from rest_framework.routers import DefaultRouter
 from result import views as res_views
@@ -30,6 +31,7 @@ urlpatterns = [
     # path('professors/<int:id>', views.ProfessorDetails.as_view())
 
     path('', include(router.urls)),
+    path('professor/', RedirectView.as_view(url='/professors/', query_string=True, permanent=False)),
 
     path('result/', res_views.ResultView.as_view()),
     path('marksheet/', res_views.MarkSheetView.as_view()),

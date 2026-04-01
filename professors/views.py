@@ -6,6 +6,7 @@ from rest_framework import status
 from django.http import Http404
 from django.shortcuts import get_object_or_404
 from rest_framework import mixins, generics, viewsets
+from django_filters.rest_framework import DjangoFilterBackend
 
 # class Professor(APIView):
 #     def get(self, request):
@@ -126,3 +127,6 @@ class ProfessorViewSet(viewsets.ModelViewSet):
     queryset=ProfessorModel.objects.all()
     serializer_class=ProfessorSerializer
     pagination_class=MyPagination
+
+    filter_backends=[DjangoFilterBackend]
+    filterset_fields=['degree', 'id']
