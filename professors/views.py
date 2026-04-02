@@ -128,5 +128,6 @@ class ProfessorViewSet(viewsets.ModelViewSet):
     serializer_class=ProfessorSerializer
     pagination_class=MyPagination
 
+
     filter_backends=[DjangoFilterBackend]
     filterset_fields=['degree', 'id']
