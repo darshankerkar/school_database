@@ -1,11 +1,6 @@
 from .models import Professor as ProfessorModel # rename model since same names for classes
-from rest_framework.views import APIView
 from .serializers import ProfessorSerializer
-from rest_framework.response import Response
-from rest_framework import status
-from django.http import Http404
-from django.shortcuts import get_object_or_404
-from rest_framework import mixins, generics, viewsets
+from rest_framework import viewsets
 from django_filters.rest_framework import DjangoFilterBackend
 
 # class Professor(APIView):
