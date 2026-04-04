@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from rest_framework import generics
 from .models import Author as AuthorModel
 from .models import Book as BookModel
