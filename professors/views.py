@@ -2,6 +2,7 @@ from .models import Professor as ProfessorModel # rename model since same names 
 from .serializers import ProfessorSerializer
 from rest_framework import viewsets
 from django_filters.rest_framework import DjangoFilterBackend
+from .filters import ProfessorFilter
 
 # class Professor(APIView):
 #     def get(self, request):
@@ -123,6 +124,5 @@ class ProfessorViewSet(viewsets.ModelViewSet):
     serializer_class=ProfessorSerializer
     pagination_class=MyPagination
 
-
     filter_backends=[DjangoFilterBackend]
-    filterset_fields=['degree', 'id']
+    filterset_class = ProfessorFilter
