@@ -2,7 +2,10 @@ from rest_framework import generics
 from .models import Author as AuthorModel
 from .models import Book as BookModel
 from .serializers import AuthorSerializer, BookSerializer
+from django.shortcuts import render
 
+def home(request):
+    return render(request, 'library/home.html')
 
 class AuthorView(generics.ListCreateAPIView):
     queryset=AuthorModel.objects.all()

@@ -8,7 +8,7 @@ from rest_framework.decorators import api_view
 # Create your views here.
 
 def home(request):
-    return render(request, 'home.html')
+    return render(request, 'students/home.html') # for using templates (since root has templates)
 
 @api_view(['GET', 'POST']) # This converts a normal Django function into a DRF API view.
 def student_details(request):

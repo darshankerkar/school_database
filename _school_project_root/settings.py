@@ -71,7 +71,7 @@ ROOT_URLCONF = '_school_project_root.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'], # for adding any folder in project root 
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

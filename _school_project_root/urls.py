@@ -20,21 +20,23 @@ from django.views.generic import RedirectView
 from professors import views
 from rest_framework.routers import DefaultRouter
 from result import views as res_views
+from . import views as root_views
 
 router = DefaultRouter()
 router.register('professors', views.ProfessorViewSet, basename='professor')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('students/', include('students.urls')), # for func based views
+    path('api/', root_views.home, name='api_home'),
+    path('api/students/', include('students.urls')), # for func based views
     # path('professors/', views.Professor.as_view()), # for class based views
     # path('professors/<int:id>', views.ProfessorDetails.as_view())
 
-    path('', include(router.urls)),
-    path('professor/', RedirectView.as_view(url='/professors/', query_string=True, permanent=False)),
+    path('api/', include(router.urls)),
+    path('professor/', RedirectView.as_view(url='/api/professors/', query_string=True, permanent=False)),
 
-    path('result/', res_views.ResultView.as_view()),
-    path('marksheet/', res_views.MarkSheetView.as_view()),
+    path('api/result/', res_views.ResultView.as_view()),
+    path('api/marksheet/', res_views.MarkSheetView.as_view()),
 
-    path('library/', include('library.urls')),
+    path('api/library/', include('library.urls')),
 ]
