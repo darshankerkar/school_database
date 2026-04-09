@@ -1,14 +1,14 @@
 import { Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
-import Home from '../pages/Home';
-import Authors from '../pages/Authors';
-import Books from '../pages/Books';
-import Dashboard from '../pages/Dashboard';
-import Students from '../pages/Students';
-import Result from '../pages/Result';
-import Library from '../pages/Library';
-import Professors from '../pages/Professors';
-import Marksheet from '../pages/Marksheet';
+import Home from './pages/Home';
+import Authors from './pages/Authors';
+import Books from './pages/Books';
+import Dashboard from './pages/Dashboard';
+import Students from './pages/Students';
+import Result from './pages/Result';
+import Library from './pages/Library';
+import Professors from './pages/Professors';
+import Marksheet from './pages/Marksheet';
 import './App.css';
 
 function App() {
