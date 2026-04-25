@@ -1,6 +1,6 @@
 ﻿# School Database API (DRF Project)
 
-This repository is a hands-on Django REST Framework (DRF) learning project.
+This repository is a hands-on Django REST Framework (DRF) project.
 
 The goal of this project is to implement and demonstrate DRF concepts I learned, including serializers, function-based APIs, class-based generic APIs, viewsets, pagination, filtering, status codes, and model relationships.
 
