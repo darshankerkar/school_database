@@ -1,8 +1,5 @@
-# Frontend
-frontend/node_modules/
-frontend/.vite/
-frontend/dist/
-frontend/package-lock.json
+# Frontend (Kept strictly local)
+frontend/
 
 # Backend
 backend/__pycache__/
