@@ -1,4 +1,4 @@
-﻿# School Database API (DRF Learning Project)
+﻿# School Database API (DRF Project)
 
 This repository is a hands-on Django REST Framework (DRF) learning project.
 
